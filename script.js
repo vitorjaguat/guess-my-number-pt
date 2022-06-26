@@ -9,7 +9,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // console.log(document.querySelector('.guess').value);
     const guess = Number(document.querySelector('.guess').value);
 
-    if (!guess || guess < 1) {
+    if (!guess || guess < 1 || guess > 20) {
         document.querySelector('.message').textContent = '🚫 Números de 1 a 20, ô mané!';
     } else if (guess === secretNumber) {
         document.querySelector('.message').textContent = '🎉 Acertouuu!';
